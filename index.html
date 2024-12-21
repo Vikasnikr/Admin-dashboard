@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="login-container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="container" id="dashboard-container">
+        <aside class="sidebar">
+            <h2>Admin</h2>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard" id="dashboard-link">Dashboard</a></li>
+                    <li><a href="#users" id="users-link">Users</a></li>
+                    <li><a href="#settings" id="settings-link">Settings</a></li>
+                    <li><a href="#logout" id="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <h1 id="header-title">Dashboard</h1>
+            </header>
+            <section id="dashboard" class="content-section active">
+                <h2>Overview</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Total Users</h3>
+                        <p id="total-users">150</p>
+                    </div>
+                    <div class="card">
+                        <h3>Active Users</h3>
+                        <p id="active-users">75</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pending Orders</h3>
+                        <p id="pending-orders">30</p>
+                    </div>
+                    
+                </div>
+            </section>
+            <section id="users" class="content-section">
+                <h2>Users</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jane Smith</td>
+                            <td>jane@example.com</td>
+                            <td>Editor</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Bob Johnson</td>
+                            <td>bob@example.com</td>
+                            <td>Viewer</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Alice Williams</td>
+                            <td>alice@example.com</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Michael Brown</td>
+                            <td>michael@example.com</td>
+                            <td>Editor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="settings" class="content-section">
+                <h2>Settings</h2>
+                <form>
+                    <div>
+                        <label for="site-title">Site Title:</label>
+                        <input type="text" id="site-title" name="site-title" value="Admin Dashboard">
+                    </div>
+                    <div>
+                        <label for="admin-email">Admin Email:</label>
+                        <input type="email" id="admin-email" name="admin-email" value="admin@example.com">
+                    </div>
+                    <div>
+                        <label for="theme">Theme:</label>
+                        <select id="theme" name="theme">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Save Settings</button>
+                    </div>
+                </form>
+            </section>
+            <section id="logout" class="content-section">
+                <h2>Logout</h2>
+                <p>You have logged out successfully.</p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
